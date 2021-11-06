@@ -261,8 +261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetPosition: {fileID: 397939563}
-  interactableName: Grandma
-  talkToNode: Grandma
+  interactableName: Uncle
+  talkToNode: Uncle
   scriptToLoad: {fileID: 2480198943629176163, guid: 7d12e0adacd0c3f4db95f3811c8fa58b, type: 3}
 --- !u!1 &511752218
 GameObject:
@@ -484,9 +484,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetPosition: {fileID: 945404664}
-  interactableName: Uncle
-  talkToNode: Uncle
-  scriptToLoad: {fileID: 2480198943629176163, guid: 7d12e0adacd0c3f4db95f3811c8fa58b, type: 3}
+  interactableName: Grandma
+  talkToNode: Grandma
+  scriptToLoad: {fileID: 2480198943629176163, guid: 62b5488413b9833499a1bb9adb015e20, type: 3}
 --- !u!1 &1233374329
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,7 +664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308597387005c2f48bb6f18caa51cae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 4
+  dialogueRunner: {fileID: 1934006587}
 --- !u!1 &1797253455
 GameObject:
   m_ObjectHideFlags: 0

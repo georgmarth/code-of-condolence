@@ -1,0 +1,34 @@
+title: Grandma
+tags: 
+colorID: 0
+position: 524,111
+---
+<<if visited("Grandma") is false>>
+    Player: Hey, Sally.
+    Sally: Oh! Hi.
+    Sally: You snuck up on me.
+    Sally: Don't do that.
+<<else>>
+    Player: Hey.
+    Sally: Hi.
+<<endif>>
+
+[[Increase Mood|Grandma.IncreaseMoodTest]]
+[[Decrease Mood|Grandma.DecreaseMoodTest]]
+===
+title: Grandma.IncreaseMoodTest
+tags: 
+colorID: 0
+position: 524,111
+---
+<<increasemood 10>>
+Increase
+===
+title: Grandma.DecreaseMoodTest
+tags: 
+colorID: 0
+position: 524,111
+---
+<<decreasemood 10>>
+Decrease
+===

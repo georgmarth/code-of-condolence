@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: 7d12e0adacd0c3f4db95f3811c8fa58b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - test-Sally-0
+  - test-Sally-1
+  - test-Sally-2
+  - test-Sally-3
+  - test-Sally-4
+  - test-Sally-5
+  - test-Sally-6
+  - test-Sally-7
+  - test-Sally-8
+  - test-Sally.Watch-9
+  - test-Sally.Watch-10
+  - test-Sally.Watch-11
+  - test-Sally.Watch-12
+  - test-Sally.Watch-13
+  - test-Sally.Exit-14
+  - test-Sally.Sorry-15
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: "Error on line 7 at position 18:\nextraneous input ' 1'
+    expecting ']]'\r\n[[Option 1|Option 1]]\r\n                 ^^"
+  baseLanguage: {fileID: 7128917941130120860, guid: 7d12e0adacd0c3f4db95f3811c8fa58b, type: 3}
+  localizations: []

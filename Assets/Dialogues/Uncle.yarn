@@ -21,12 +21,14 @@ tags:
 colorID: 0
 position: 524,111
 ---
-<<increaseMood 10>>
+<<increasemood 10>>
+Increase
 ===
 title: Uncle.DecreaseMoodTest
 tags: 
 colorID: 0
 position: 524,111
 ---
-<<decreaseMood 10>>
+<<decreasemood 10>>
+Decrease
 ===
