@@ -24,6 +24,8 @@ public class NodeVisitedTracker : MonoBehaviour
             var nodeName = parameters[0];
             return _visitedNodes.Contains(nodeName.AsString);
         });
+        dialogueRunner.onNodeComplete.AddListener(NodeComplete);
+        dialogueRunner.onNodeStart.AddListener(NodeStart);
 
     }
 

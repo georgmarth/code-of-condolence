@@ -11,6 +11,7 @@ tags:
 colorID: 8
 position: -1203,-24
 ---
+<<if visited("Grandma.Sympathetic") is false>>
 Grandma     Terribly! My, fifty years...
 		    	But every cloud has a silver lining. 
 	Eve	    	What do you mean? 
@@ -20,7 +21,7 @@ Grandma     Terribly! My, fifty years...
 	Grandma	    Indeed, to Grandpa! 
 	Eve		    To Grandpa!
 <<increasemood Grandma 50>>
-    
+<<endif>>
 ===
 title: Grandma.Persuasive
 tags: 
