@@ -1,0 +1,184 @@
+title: Grandma
+tags: 
+colorID: 0
+position: -1098,-317
+---
+[[ You’re going to really miss Grandpa, huh? | Grandma.Sympathetic]]
+[[ Don’t you think that Grandpa would have wanted something a bit more… fun? | Grandma.Persuasive]]
+===
+title: Grandma.Sympathetic
+tags: 
+colorID: 8
+position: -1203,-24
+---
+Grandma     Terribly! My, fifty years...
+		    	But every cloud has a silver lining. 
+	Eve	    	What do you mean? 
+	Grandma 	I can get rid of all his model trains. 
+		    	And with the money he left, I’ve booked a cruise! 
+	Eve	    	That sounds like something to celebrate! 
+	Grandma	    Indeed, to Grandpa! 
+	Eve		    To Grandpa!
+===
+title: Grandma.Persuasive
+tags: 
+colorID: 7
+position: -892,-28
+---
+Grandma     Fun… at a funeral?
+You 		Yes. Everyone here is so… miserable. 
+Grandma	    And so they should be! Aren’t you? After everything Grandpa did for you?
+			You should be ashamed of yourself.
+===
+title: DrunkUncle
+tags: 
+colorID: 1
+position: -298,-320
+---
+[[A good excuse to drown your sorrows, isn’t it? | DrunkUncle.Depressing]]
+[[I think Grandpa would have been happy that at least someone is getting the drinks in. | DrunkUncle.Positive]]
+===
+title: DrunkUncle.Depressing
+tags: 
+colorID: 0
+position: -415,-14
+---
+Drunk Uncle 		As good as ever, my dear. Fancy a top up? 
+	Eve			        I’m ok thanks. 
+	Drunk Uncle	    	Oh, go on. 
+	Eve			        I’m ten years old. 
+	Drunk Uncle     	Ah, yes. Hmm. 
+			        	Maybe this conversation should be our little secret. 
+				        No need to tell your mother or anything like that. 
+	Eve			        It’s ok, I think Grandpa would be happy to see people getting drunk. 
+	Drunk Uncle 		Drunk? Oh, no dear. No one is drunk here. Hic. 
+				        We must pay our respects properly. 
+				        A moment of silence now, to remember.
+===
+title: DrunkUncle.Positive
+tags: 
+colorID: 0
+position: -107,-15
+---
+Drunk Uncle 	My dear, I am happy to be of service. 
+	Eve		    	I think Grandpa would have wanted everyone to celebrate, not sit around being sad. 
+	Drunk Uncle		Couldn’t agree more, my dear! How about we go and give everyone a top up, make it a bit more lively! 
+	Eve			    I think that’s a wonderful idea! To Grandpa! 
+	Drunk Uncle		To Grandpa!
+===
+title: FreeBuffetGuy
+tags: 
+colorID: 0
+position: 479,-311
+---
+[[You know, I’m not really feeling this.  | FreeBuffetGuy.Heart]]
+[[This is wrong. We should be celebrating his life, not mourning his death.  | FreeBuffetGuy.Direct]]
+===
+title: FreeBuffetGuy.Heart
+tags: 
+colorID: 0
+position: 345,-21
+---
+Free Buffet Guy		Really? That’s a bold thing to say. 
+	Eve		    	    I want to celebrate Grandpa for all the good times we had, not mourn the fact he’s gone.
+	Free Buffet Guy		I’ll drink to that, little girl. That’s beautiful. 
+				        To your Grandpa, and the good times! 
+	Eve		    	    How did you know him?		
+	Free Buffet Guy	    Er… um… oh the good old days… I…. Er… 
+				        Say, isn’t it a splendid buffet? You must try a sausage roll.
+===
+title: FreeBuffetGuy.Direct
+tags: 
+colorID: 0
+position: 666,-25
+---
+Free Buffet Guy 	Hear hear! 
+	Eve			        I think he would have wanted us to celebrate every moment of his life. 
+	Free Buffet Guy		Exactly. I want to celebrate every little detail! 	
+	Eve			        What’s your favourite memory of Grandpa?
+	Free Buffet Guy     Me? Oh! I, um, I… the good old days.
+    Eve                 But what exactly? 
+    Free Buffet Guy     I don't want to talk about it. 
+	Eve			        But you just said — 
+	Free Buffet Guy		Please, it’s too much. Grief is mysterious. 
+			    	    Just leave me here, with the free food to console me.
+===
+title: PartyHat
+tags: 
+colorID: 0
+position: -1081,481
+---
+You spot something pink underneath a church pew. A party hat! 
+
+[[Wear the party hat. | PartyHat.Wear]]
+[[Respectfully place the party hat on Grandad's coffin. | PartyHat.Coffin]]
+===
+title: Flowers
+tags: 
+colorID: 0
+position: -282,482
+---
+You find some flowers on the coffin.
+
+Give the flowers to Grandma. [[Flowers.Grandmaflowers]]
+The flowers are holy, leave them alone. [[Flowers.Holy]]
+===
+title: FuneralCake
+tags: 
+colorID: 0
+position: 493,490
+---
+You found a funeral cake, congratulations. 
+
+Put the cake on the buffet table. [[FuneralCake.Buffettable]]
+Eat the entire cake yourself. [[FuneralCake.Sick]]
+===
+title: PartyHat.Wear
+tags: 
+colorID: 0
+position: -1250,752
+---
+Silence falls across the room. 
+
+Eventually, Drunk Uncle starts to laugh.
+'Oh stop being so bloody miserable!' he exclaims.
+===
+title: PartyHat.Coffin
+tags: 
+colorID: 0
+position: -843,752
+---
+Grandma starts to cry. 
+'Who taught her these morals?' she wails.
+===
+title: Flowers.Holy
+tags: 
+colorID: 0
+position: -432,747
+---
+The flowers will wither and rot as they buried with Grandpa's dead body.
+===
+title: Flowers.Grandmaflowers
+tags: 
+colorID: 0
+position: -106,745
+---
+Grandma takes the flowers, and looks at you kindly. 
+'Thank you petal,' she says.
+===
+title: FuneralCake.Buffettable
+tags: 
+colorID: 0
+position: 338,756
+---
+Free Buffet Guy is overjoyed. 
+'These are what keep me coming!' He says.
+===
+title: FuneralCake.Sick
+tags: 
+colorID: 0
+position: 739,748
+---
+The cake is choclatey and delicious, but immediately makes you feel a bit sick. You run to the toilet, but on your way you spray cake-sick all over... Grandad's coffin. 
+No one is impressed.
+===
