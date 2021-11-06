@@ -180,6 +180,7 @@ colorID: 0
 position: 338,756
 ---
 <<hidesprite FuneralCake>>
+<<showsprite FuneralCake.Buffettable>>
 Free Buffet Guy is overjoyed. 
 'These are what keep me coming!' He says.
 ===
@@ -189,6 +190,7 @@ colorID: 0
 position: 739,748
 ---
 <<hidesprite FuneralCake>>
+<<showsprite FuneralCake.Sick>>
 The cake is choclatey and delicious, but immediately makes you feel a bit sick. You run to the toilet, but on your way you spray cake-sick all over... Grandad's coffin. 
 No one is impressed.
 ===
