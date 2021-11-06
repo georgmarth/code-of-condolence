@@ -18,6 +18,7 @@ public class MoodStorage : InMemoryVariableStorage
     
     public void SetMood(string character, float value)
     {
+        Debug.Log($"Set Mood {character} {value}");
         SetValue($"{character}Mood", Mathf.Clamp(value, 0, MaximumMood));
     }
 }
