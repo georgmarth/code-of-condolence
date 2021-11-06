@@ -2,12 +2,13 @@
 using UnityEngine;
 using UniRx;
 using Yarn.Unity;
+using System.Collections.Generic;
 
 namespace Assets.Scripts.YarnTest
 {
     public class MoodChange : MonoBehaviour
     {
-        Interactable currentInteractable;
+        //Interactable currentInteractable;
         //        // The dialogue runner that we want to attach the 'visited' function to
 #pragma warning disable 0649
         [SerializeField] Yarn.Unity.DialogueRunner dialogueRunner;
@@ -16,12 +17,12 @@ namespace Assets.Scripts.YarnTest
 
         void Start()
         {
-            PlayerController.Instance.ArrivingAt.Subscribe(interactable =>
-            {
-                currentInteractable = interactable;
-                Debug.Log("arrived at " + interactable.interactableName);
+            //PlayerController.Instance.ArrivingAt.Subscribe(interactable =>
+            //{
+            //    currentInteractable = interactable;
+            //    Debug.Log("arrived at " + interactable.interactableName);
 
-            });
+            //});
             dialogueRunner.AddCommandHandler(
                 "increasemood",
                 IncreaseMood
@@ -36,20 +37,24 @@ namespace Assets.Scripts.YarnTest
 
         public void IncreaseMood(string[] parameters)
         {
-            var amount = float.Parse(parameters[0]);
-            var variableName = $"{currentInteractable.interactableName}Mood";
-            Debug.Log($"increased mood by {amount} for {currentInteractable.interactableName}");
+            var name = parameters[0];
+            var amount = float.Parse(parameters[1]);
+            var variableName = $"{name}Mood";
+            Debug.Log($"increased mood by {amount} for {name}");
             var newValue = variableStorage.GetValue(variableName).AsNumber + amount;
             variableStorage.SetValue(variableName, newValue);
         }
 
         public void DecreaseMood(string[] parameters)
         {
-            var amount = float.Parse(parameters[0]);
-            var variableName = $"{currentInteractable.interactableName}Mood";
-            Debug.Log($"decreased mood by {amount} for {currentInteractable.interactableName}");
+            var name = parameters[0];
+            var amount = float.Parse(parameters[1]);
+            var variableName = $"{name}Mood";
+            Debug.Log($"decreased mood by {amount} for {name}");
             var newValue = variableStorage.GetValue(variableName).AsNumber - amount;
             variableStorage.SetValue(variableName, newValue);
         }
+
+
     }
 }
