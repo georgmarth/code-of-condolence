@@ -9,7 +9,6 @@ public class PlayerController : Singleton<PlayerController>
     public readonly Subject<Interactable> ArrivingAt = new Subject<Interactable>();
 
     private readonly SerialDisposable _serialDisposable = new SerialDisposable();
-    public Yarn.Unity.DialogueRunner dialogueRunner;
 
     private void Start()
     {
@@ -22,8 +21,10 @@ public class PlayerController : Singleton<PlayerController>
             .Subscribe(StartWalkingTo);
         ArrivingAt.Subscribe(interactable =>
         {
+            var dialogueRunner = DialogueInstance.Instance.DialogueRunner;
             if (interactable.scriptToLoad != null)
             {
+                
                 dialogueRunner.Add(interactable.scriptToLoad);
             }
             dialogueRunner.StartDialogue(interactable.talkToNode);

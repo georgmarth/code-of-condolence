@@ -1,4 +1,5 @@
-﻿using UniRx;
+﻿using JetBrains.Annotations;
+using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ public class Clickable : MonoBehaviour
 {
     public Collider2D Collider;
     public readonly Subject<Unit> Clicked = new Subject<Unit>();
+    
+    [CanBeNull, Header("Optional")]
     public Interactable Interactable;
 
     private void Start()
