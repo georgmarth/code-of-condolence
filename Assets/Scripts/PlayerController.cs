@@ -14,21 +14,27 @@ public class PlayerController : Singleton<PlayerController>
     {
         ClickEventManager.Instance
             .InteractableClicks
+            .Where(_ => !DialogueInstance.Instance.DialogueRunner.IsDialogueRunning)
             .Subscribe(StartWalkingTo);
 
         ClickEventManager.Instance
             .WorldClicks
+            .Where(_ => !DialogueInstance.Instance.DialogueRunner.IsDialogueRunning)
             .Subscribe(StartWalkingTo);
-        ArrivingAt.Subscribe(interactable =>
-        {
-            var dialogueRunner = DialogueInstance.Instance.DialogueRunner;
-            if (interactable.scriptToLoad != null && !dialogueRunner.NodeExists(interactable.talkToNode))
-            {
-                dialogueRunner.Add(interactable.scriptToLoad);
-            }
-            dialogueRunner.StartDialogue(interactable.talkToNode);
-        });
+        
+        ArrivingAt.Subscribe(WhenArrivingAtInteractable);
 
+    }
+
+    private void WhenArrivingAtInteractable(Interactable interactable)
+    {
+        var dialogueRunner = DialogueInstance.Instance.DialogueRunner;
+        if (interactable.scriptToLoad != null && !dialogueRunner.NodeExists(interactable.talkToNode))
+        {
+            dialogueRunner.Add(interactable.scriptToLoad);
+        }
+
+        dialogueRunner.StartDialogue(interactable.talkToNode);
     }
 
     private void StartWalkingTo(Interactable interactable)
