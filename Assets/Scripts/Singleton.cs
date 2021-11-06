@@ -24,9 +24,9 @@ public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T>
         {
             _instance = this as T;
         }
-        else
+        else if (_instance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }

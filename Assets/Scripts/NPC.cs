@@ -25,7 +25,6 @@ public class NPC : MonoBehaviour
 
     private void UpdateSlider(float mood)
     {
-        Debug.Log($"Update Slider {mood}");
         moodSlider.value = mood;
     }
 }

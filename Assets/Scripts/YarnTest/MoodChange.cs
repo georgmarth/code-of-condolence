@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using UnityEngine;
-using UniRx;
+﻿using UnityEngine;
 using Yarn.Unity;
-using System.Collections.Generic;
 
 namespace Assets.Scripts.YarnTest
 {

@@ -182,7 +182,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2000732465
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: fcc89af1e37b6954381a9ac0b6c2c4ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -287,7 +287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2035500923238756735, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
       propertyPath: m_Name
-      value: FreeBuffet Guy
+      value: FreeBuffet Guy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4032110515691910938, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
       propertyPath: m_AnchorMax.x
