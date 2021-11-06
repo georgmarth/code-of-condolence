@@ -16,7 +16,7 @@ namespace Assets.Scripts.YarnTest
 
         void Start()
         {
-            CharacterController.Instance.ArrivingAt.Subscribe(interactable =>
+            PlayerController.Instance.ArrivingAt.Subscribe(interactable =>
             {
                 currentInteractable = interactable;
                 Debug.Log("arrived at " + interactable.interactableName);

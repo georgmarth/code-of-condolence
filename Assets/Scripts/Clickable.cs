@@ -14,9 +14,17 @@ public class Clickable : MonoBehaviour
             .Subscribe(_ => OnClick());
     }
 
+    private static Vector3 GetMousePosition()
+    {
+        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    }
+
     private void OnClick()
     {
-        ClickEventManager.Instance.Clicks.OnNext(new ClickEvent { ClickTarget = Interactable });
+        if (Interactable == null)
+            ClickEventManager.Instance.WorldClicks.OnNext(GetMousePosition());
+        else
+            ClickEventManager.Instance.InteractableClicks.OnNext(Interactable);
         Clicked.OnNext(Unit.Default);
     }
 }

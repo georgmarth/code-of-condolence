@@ -2,7 +2,7 @@
 
 public class Interactable : MonoBehaviour
 {
-    public Transform TargetPosition;
+    public Transform TargetTransform;
     public string interactableName = "";
 
     public string talkToNode = "";
