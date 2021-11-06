@@ -206,9 +206,21 @@ PrefabInstance:
       value: 3.89
       objectReference: {fileID: 0}
     - target: {fileID: 2035500923238756722, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
+      propertyPath: talkToNode
+      value: DrunkUncle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035500923238756722, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
+      propertyPath: scriptToLoad
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035500923238756722, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
       propertyPath: TargetTransform
       value: 
       objectReference: {fileID: 3917195634016409470}
+    - target: {fileID: 2035500923238756722, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
+      propertyPath: interactableName
+      value: DrunkUncle
+      objectReference: {fileID: 0}
     - target: {fileID: 2035500923238756723, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -10,12 +10,6 @@ namespace Assets.Scripts.YarnTest
     {
         void Start()
         {
-            //PlayerController.Instance.ArrivingAt.Subscribe(interactable =>
-            //{
-            //    currentInteractable = interactable;
-            //    Debug.Log("arrived at " + interactable.interactableName);
-
-            //});
             DialogueRunner dialogueRunner = DialogueInstance.Instance.DialogueRunner;
             dialogueRunner.AddCommandHandler(
                 "increasemood",

@@ -212,7 +212,7 @@ PrefabInstance:
     - target: {fileID: 2035500923238756722, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
       propertyPath: scriptToLoad
       value: 
-      objectReference: {fileID: 2480198943629176163, guid: 62b5488413b9833499a1bb9adb015e20, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2035500923238756722, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
       propertyPath: TargetTransform
       value: 

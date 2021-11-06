@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4068380849537614946, guid: 4ec3df5875e7347beb6176b545b8fb39, type: 3}
       propertyPath: m_Name
-      value: Dialogue
+      value: Dialogue Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5935829474028046605, guid: 4ec3df5875e7347beb6176b545b8fb39, type: 3}
       propertyPath: m_AnchorMax.y
@@ -115,6 +115,14 @@ PrefabInstance:
       propertyPath: variableStorage
       value: 
       objectReference: {fileID: 720241227152374511}
+    - target: {fileID: 5935829475398715329, guid: 4ec3df5875e7347beb6176b545b8fb39, type: 3}
+      propertyPath: yarnScripts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935829475398715329, guid: 4ec3df5875e7347beb6176b545b8fb39, type: 3}
+      propertyPath: yarnScripts.Array.data[0]
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: 0b56d89778965714e9564ebbef3efda0, type: 3}
     - target: {fileID: 5935829475522760372, guid: 4ec3df5875e7347beb6176b545b8fb39, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -285,5 +293,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45f88da01e0fc84988e47596c3b4b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueRunner: {fileID: 6163150797165211234}
-  variableStorage: {fileID: 720241227152374511}
+--- !u!114 &1823794478458679268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163150797165211239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ee2b5acabebc04db547423757114c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

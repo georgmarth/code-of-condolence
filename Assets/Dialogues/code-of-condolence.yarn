@@ -19,12 +19,15 @@ Grandma     Terribly! My, fifty years...
 	Eve	    	That sounds like something to celebrate! 
 	Grandma	    Indeed, to Grandpa! 
 	Eve		    To Grandpa!
+<<increasemood Grandma 50>>
+    
 ===
 title: Grandma.Persuasive
 tags: 
 colorID: 7
 position: -892,-28
 ---
+<<decreasemood Grandma 50>>
 Grandma     Fun… at a funeral?
 You 		Yes. Everyone here is so… miserable. 
 Grandma	    And so they should be! Aren’t you? After everything Grandpa did for you?
@@ -54,6 +57,7 @@ Drunk Uncle 		As good as ever, my dear. Fancy a top up?
 	Drunk Uncle 		Drunk? Oh, no dear. No one is drunk here. Hic. 
 				        We must pay our respects properly. 
 				        A moment of silence now, to remember.
+<<decreasemood DrunkUncle 20>>
 ===
 title: DrunkUncle.Positive
 tags: 
@@ -65,6 +69,7 @@ Drunk Uncle 	My dear, I am happy to be of service.
 	Drunk Uncle		Couldn’t agree more, my dear! How about we go and give everyone a top up, make it a bit more lively! 
 	Eve			    I think that’s a wonderful idea! To Grandpa! 
 	Drunk Uncle		To Grandpa!
+<<increasemood DrunkUncle 20>>
 ===
 title: FreeBuffetGuy
 tags: 
@@ -86,6 +91,7 @@ Free Buffet Guy		Really? That’s a bold thing to say.
 	Eve		    	    How did you know him?		
 	Free Buffet Guy	    Er… um… oh the good old days… I…. Er… 
 				        Say, isn’t it a splendid buffet? You must try a sausage roll.
+<<increasemood FreeBuffetGuy 20>>
 ===
 title: FreeBuffetGuy.Direct
 tags: 
@@ -102,6 +108,7 @@ Free Buffet Guy 	Hear hear!
 	Eve			        But you just said — 
 	Free Buffet Guy		Please, it’s too much. Grief is mysterious. 
 			    	    Just leave me here, with the free food to console me.
+<<decreasemood FreeBuffetGuy 20>>
 ===
 title: PartyHat
 tags: 
@@ -120,8 +127,8 @@ position: -282,482
 ---
 You find some flowers on the coffin.
 
-Give the flowers to Grandma. [[Flowers.Grandmaflowers]]
-The flowers are holy, leave them alone. [[Flowers.Holy]]
+[[Give the flowers to Grandma. | Flowers.Grandmaflowers]]
+[[The flowers are holy, leave them alone. | Flowers.Holy]]
 ===
 title: FuneralCake
 tags: 
@@ -130,8 +137,8 @@ position: 493,490
 ---
 You found a funeral cake, congratulations. 
 
-Put the cake on the buffet table. [[FuneralCake.Buffettable]]
-Eat the entire cake yourself. [[FuneralCake.Sick]]
+[[Put the cake on the buffet table. | FuneralCake.Buffettable]]
+[[Eat the entire cake yourself. | FuneralCake.Sick]]
 ===
 title: PartyHat.Wear
 tags: 
@@ -171,6 +178,7 @@ tags:
 colorID: 0
 position: 338,756
 ---
+<<hidesprite FuneralCake>>
 Free Buffet Guy is overjoyed. 
 'These are what keep me coming!' He says.
 ===
@@ -179,6 +187,7 @@ tags:
 colorID: 0
 position: 739,748
 ---
+<<hidesprite FuneralCake>>
 The cake is choclatey and delicious, but immediately makes you feel a bit sick. You run to the toilet, but on your way you spray cake-sick all over... Grandad's coffin. 
 No one is impressed.
 ===

@@ -210,9 +210,21 @@ PrefabInstance:
       value: 6.01
       objectReference: {fileID: 0}
     - target: {fileID: 2035500923238756722, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
+      propertyPath: talkToNode
+      value: FreeBuffetGuy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035500923238756722, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
+      propertyPath: scriptToLoad
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035500923238756722, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
       propertyPath: TargetTransform
       value: 
       objectReference: {fileID: 6410180572788200161}
+    - target: {fileID: 2035500923238756722, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
+      propertyPath: interactableName
+      value: FreeBuffetGuy
+      objectReference: {fileID: 0}
     - target: {fileID: 2035500923238756723, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -275,7 +287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2035500923238756735, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
       propertyPath: m_Name
-      value: FreeBuffet Guy Variant
+      value: FreeBuffet Guy
       objectReference: {fileID: 0}
     - target: {fileID: 4032110515691910938, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
       propertyPath: m_AnchorMax.x
