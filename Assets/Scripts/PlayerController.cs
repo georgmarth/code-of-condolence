@@ -22,9 +22,9 @@ public class PlayerController : Singleton<PlayerController>
         ArrivingAt.Subscribe(interactable =>
         {
             var dialogueRunner = DialogueInstance.Instance.DialogueRunner;
-            if (interactable.scriptToLoad != null)
+            if (interactable.scriptToLoad != null && dialogueRunner.a)
             {
-                
+
                 dialogueRunner.Add(interactable.scriptToLoad);
             }
             dialogueRunner.StartDialogue(interactable.talkToNode);

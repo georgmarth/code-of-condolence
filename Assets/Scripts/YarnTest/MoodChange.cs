@@ -8,13 +8,6 @@ namespace Assets.Scripts.YarnTest
 {
     public class MoodChange : MonoBehaviour
     {
-        //Interactable currentInteractable;
-        //        // The dialogue runner that we want to attach the 'visited' function to
-#pragma warning disable 0649
-        [SerializeField] Yarn.Unity.DialogueRunner dialogueRunner;
-#pragma warning restore 0649
-        public Yarn.Unity.InMemoryVariableStorage variableStorage;
-
         void Start()
         {
             //PlayerController.Instance.ArrivingAt.Subscribe(interactable =>
@@ -23,6 +16,7 @@ namespace Assets.Scripts.YarnTest
             //    Debug.Log("arrived at " + interactable.interactableName);
 
             //});
+            DialogueRunner dialogueRunner = DialogueInstance.Instance.DialogueRunner;
             dialogueRunner.AddCommandHandler(
                 "increasemood",
                 IncreaseMood
@@ -39,22 +33,70 @@ namespace Assets.Scripts.YarnTest
         {
             var name = parameters[0];
             var amount = float.Parse(parameters[1]);
-            var variableName = $"{name}Mood";
-            Debug.Log($"increased mood by {amount} for {name}");
-            var newValue = variableStorage.GetValue(variableName).AsNumber + amount;
-            variableStorage.SetValue(variableName, newValue);
+            IncreaseMood(name, amount);
+            if (name == "all")
+            {
+                IncreaseMoodForAll(amount);
+            }
+            else
+            {
+                IncreaseMood(name, amount);
+            }
+        }
+        public string GetMoodVariableName(string character)
+        {
+            return $"{name}Mood";
+        }
+        public void IncreaseMood(string character, float amount)
+        {
+            var storage = DialogueInstance.Instance.MoodStorage;
+            var newValue = storage.GetMood(character) + amount;
+            storage.SetMood(character, newValue);
         }
 
         public void DecreaseMood(string[] parameters)
         {
             var name = parameters[0];
             var amount = float.Parse(parameters[1]);
-            var variableName = $"{name}Mood";
-            Debug.Log($"decreased mood by {amount} for {name}");
-            var newValue = variableStorage.GetValue(variableName).AsNumber - amount;
-            variableStorage.SetValue(variableName, newValue);
+            if (name == "all")
+            {
+                DecreaseMoodForAll(amount);
+            }
+            else
+            {
+                DecreaseMood(name, amount);
+            }
         }
 
+        public void DecreaseMood(string character, float amount)
+        {
+            var storage = DialogueInstance.Instance.MoodStorage;
+            var newValue = storage.GetMood(character) - amount;
+            storage.SetMood(character, newValue);
+        }
 
+        void IncreaseMoodForAll(float amount)
+        {
+            var npcs = GetAllNpcs();
+            foreach (var npc in npcs)
+            {
+                var name = npc.Interactable.interactableName;
+                IncreaseMood(name, amount);
+            }
+        }
+        void DecreaseMoodForAll(float amount)
+        {
+            var npcs = GetAllNpcs();
+            foreach (var npc in npcs)
+            {
+                var name = npc.Interactable.interactableName;
+                DecreaseMood(name, amount);
+            }
+
+        }
+        NPC[] GetAllNpcs()
+        {
+            return FindObjectsOfType<NPC>();
+        }
     }
 }

@@ -7,17 +7,19 @@ public class NPC : MonoBehaviour
 {
     public Slider moodSlider;
     public float StartingMood;
-    
+    public Interactable Interactable;
+
     private void Start()
     {
-        var interactableName = GetComponent<Interactable>().interactableName;
+        Interactable = GetComponent<Interactable>();
+        var interactableName = Interactable.interactableName;
 
         var instanceMoodStorage = DialogueInstance.Instance.MoodStorage;
 
         instanceMoodStorage.GetMoodAsObservable(interactableName)
             .DistinctUntilChanged()
             .Subscribe(UpdateSlider);
-        
+
         Observable.NextFrame().Subscribe(_ => instanceMoodStorage.SetMood(interactableName, StartingMood));
     }
 
