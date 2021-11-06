@@ -22,9 +22,8 @@ public class PlayerController : Singleton<PlayerController>
         ArrivingAt.Subscribe(interactable =>
         {
             var dialogueRunner = DialogueInstance.Instance.DialogueRunner;
-            if (interactable.scriptToLoad != null && dialogueRunner.a)
+            if (interactable.scriptToLoad != null && !dialogueRunner.NodeExists(interactable.talkToNode))
             {
-
                 dialogueRunner.Add(interactable.scriptToLoad);
             }
             dialogueRunner.StartDialogue(interactable.talkToNode);
