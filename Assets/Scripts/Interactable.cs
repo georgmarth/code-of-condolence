@@ -2,6 +2,6 @@
 
 public class Interactable : MonoBehaviour
 {
-    public Transform TargetPosition;
+    public Transform TargetTransform;
 
 }
