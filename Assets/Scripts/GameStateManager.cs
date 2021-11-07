@@ -6,7 +6,10 @@ using UnityEngine;
 
 public class GameStateManager : Singleton<GameStateManager>
 {
-    public IObservable<bool> GameIsWon { get; private set; }
+    public IReadOnlyReactiveProperty<bool> GameIsWon { get; private set; }
+    public readonly IReactiveProperty<bool> AllOptionsAreExhausted = new ReactiveProperty<bool>(false);
+    public readonly IReactiveProperty<bool> GameMenuIsShown = new ReactiveProperty<bool>(true);
+
 
     private void Awake()
     {
@@ -14,7 +17,7 @@ public class GameStateManager : Singleton<GameStateManager>
             .Select(GetMoodObservable)
             .CombineLatest()
             .Select(CheckWinCondition)
-            .DistinctUntilChanged();
+            .ToReadOnlyReactiveProperty(false);
 
         GameIsWon
             .Where(gameIsWon => gameIsWon)
