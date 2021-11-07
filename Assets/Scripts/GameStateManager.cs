@@ -31,8 +31,7 @@ public class GameStateManager : Singleton<GameStateManager>
     private static bool AreAllOptionsExhausted()
     {
         return FindObjectsOfType<NPC>()
-            .All(npc => DialogueInstance.Instance.MoodStorage.GetValue($"{npc.Interactable.interactableName}Completed")
-                .AsBool);
+            .All(npc => DialogueInstance.Instance.MoodStorage.GetCompleted(npc.Interactable.interactableName));
     }
 
     private static IObservable<float> GetMoodObservable(NPC npc)

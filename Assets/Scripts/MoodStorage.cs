@@ -30,6 +30,17 @@ public class MoodStorage : InMemoryVariableStorage
         Debug.Log($"SetSpriteState {name} {isVisible}");
         SetValue($"sprite{name}", isVisible);
     }
+
+    public bool GetCompleted(string name)
+    {
+        return GetValue($"{name}Completed").AsBool;
+    }
+
+    public void SetCompleted(string name)
+    {
+        SetValue($"{name}Completed", true);
+    }
+    
     public IObservable<bool> GetSpriteStateAsObservable(string name)
     {
         return Observable.EveryUpdate().Select(_ => GetSpriteState(name));
