@@ -121,6 +121,7 @@ DJ Peachcheeks: DJ Peachcheeks at your service.
 Eve: Hello, would you be able to play at my Grandad’s funeral?
 DJ Peachcheeks: WOULD I? I LOVE PLAYING FUNERAL SETS. LET’S PUMP IT UP FOR YOUR GRANDPA!!!!
 <<showsprite Boombox>>
+<<increaseMood all 50>>
 <<hidesprite FreeBuffetGuy.Phone>>
 <<hidesprite Grandma.Phone>>
 <<hidesprite DrunkUncle.Phone>>
