@@ -38,6 +38,7 @@ public class MoodStorage : InMemoryVariableStorage
 
     public void SetCompleted(string name)
     {
+        Debug.Log($"{name} completed");
         SetValue($"{name}Completed", true);
     }
     

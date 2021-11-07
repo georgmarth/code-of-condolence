@@ -1164,7 +1164,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 434919793277517372, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
+    - {fileID: 6877376975486390571, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
+    - {fileID: 331863348937859881, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
 --- !u!1 &1961131405 stripped
 GameObject:
@@ -1180,7 +1183,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1961131405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8748ca3325c74b818569bd1bfa3a15a1, type: 3}
+  m_Script: {fileID: 11500000, guid: db80191e4a2a7c4439cc6debf37a907c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MusicLevelTwo: {fileID: 8300000, guid: d3a07634857bf624aaf93b99db2a7bb0, type: 3}
@@ -1374,18 +1377,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 720241227152374511, guid: 9dfe425dbadc851428657d86382bc56f, type: 3}
-      propertyPath: defaultVariables.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 720241227152374511, guid: 9dfe425dbadc851428657d86382bc56f, type: 3}
-      propertyPath: defaultVariables.Array.data[0].name
-      value: UncleMood
-      objectReference: {fileID: 0}
-    - target: {fileID: 720241227152374511, guid: 9dfe425dbadc851428657d86382bc56f, type: 3}
-      propertyPath: defaultVariables.Array.data[0].value
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 4580846202151284161, guid: 9dfe425dbadc851428657d86382bc56f, type: 3}
       propertyPath: m_Name
       value: Dialogue
@@ -1593,7 +1584,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1112884208720557857, guid: 783e294ee0327324c8604886daa233d2, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1112884208720557857, guid: 783e294ee0327324c8604886daa233d2, type: 3}
       propertyPath: m_LocalPosition.x
