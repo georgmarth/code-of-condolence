@@ -176,4 +176,4 @@ MonoBehaviour:
   SadMusic: {fileID: 8300000, guid: 25bea4f83a1e20745bcbe853c02f49e9, type: 3}
   PartyMusic: {fileID: 8300000, guid: d3a07634857bf624aaf93b99db2a7bb0, type: 3}
   WinningMusic: {fileID: 8300000, guid: 67adc411014aa1142a08b2830fed4aab, type: 3}
-  FadeDuration: 0.2
+  FadeDuration: 0.5
