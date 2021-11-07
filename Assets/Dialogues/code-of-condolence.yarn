@@ -121,9 +121,9 @@ DJ Peachcheeks: DJ Peachcheeks at your service.
 Eve: Hello, would you be able to play at my Grandad’s funeral?
 DJ Peachcheeks: WOULD I? I LOVE PLAYING FUNERAL SETS. LET’S PUMP IT UP FOR YOUR GRANDPA!!!!
 <<showsprite Boombox>>
-<<increasemood Grandma 50>>
-<<increasemood DrunkUncle 50>>
-<<increasemood FreeBuffetGuy 50>>
+<<increasemood Grandma 25>>
+<<increasemood DrunkUncle 25>>
+<<increasemood FreeBuffetGuy 25>>
 <<hidesprite FreeBuffetGuy.Phone>>
 <<hidesprite Grandma.Phone>>
 <<hidesprite DrunkUncle.Phone>>
@@ -413,9 +413,9 @@ Silence falls across the room.
 
 Grandma starts to cry. 
 'My own blood!' She wails. 'Where did these morals come from?'  
-<<decreasemood Grandma 50>>
-<<decreasemood DrunkUncle 50>>
-<<decreasemood FreeBuffetGuy 50>>
+<<decreasemood Grandma 25>>
+<<decreasemood DrunkUncle 25>>
+<<decreasemood FreeBuffetGuy 25>>
 <<endif>>
 ===
 title: Flowers.Holy
@@ -435,7 +435,7 @@ position: -106,745
 <<hidesprite Flowers>>
 Grandma takes the flowers, and looks at you kindly. 
 'Thank you petal,' she says.
-<<increasemood Grandma 50>>
+<<increasemood Grandma 25>>
 <<endif>>
 ===
 title: FuneralCake.Buffettable
@@ -460,8 +460,8 @@ position: 739,748
 The cake is chocolatey and delicious, but it makes you feel a bit sick. You try to run to the toilet, but on the way you spray cake-sick all over... Grandad's coffin. 
 
 Even Drunk Uncle is embarrassed for you. 
-<<decreasemood Grandma 50>>
-<<decreasemood DrunkUncle 50>>
-<<decreasemood FreeBuffetGuy 50>>
+<<decreasemood Grandma 25>>
+<<decreasemood DrunkUncle 25>>
+<<decreasemood FreeBuffetGuy 25>>
 <<endif>>
 ===
