@@ -573,7 +573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1061641280930645091, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
       propertyPath: SpriteId
-      value: BuffetGuy.Phone
+      value: FreeBuffetGuy.Phone
       objectReference: {fileID: 0}
     - target: {fileID: 1120017498650474701, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
       propertyPath: m_RootOrder
