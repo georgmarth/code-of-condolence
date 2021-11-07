@@ -10,12 +10,13 @@ Grandma: 	I was hard on you earlier, Eve, I’m sorry.
 <<elseif visited("Grandma.Persuasive")>>
 Grandma: Oh Eve, stop bothering me.
 <<stop>>
-<<elseif visited("Grandma.Sympathetic")>>
+<<elseif visited("Grandma.Sympathetic") or visited("Grandma.Phone")>>
 Grandma: I hope this doesn't go on too long. My boat leaves at 6pm. 
 <<stop>>
 <<else>>
 [[Eve: You’re going to really miss Grandpa, huh? | Grandma.Sympathetic]]
 [[Eve: Don’t you think that Grandpa would have wanted something a bit more… fun? | Grandma.Persuasive]]
+[[Eve: Can I borrow your phone? | Grandma.Phone]]
 <<endif>>
 ===
 title: Grandma.Sympathetic
@@ -32,6 +33,90 @@ position: -1203,-24
 	Eve:		To Grandpa!
 <<increasemood Grandma 50>>
 <<endif>>    
+===
+title: Grandma.Phone
+tags: 
+colorID: 8
+position: -1203,-24
+---
+<<if !visited("Grandma.Phone")>>
+<<showsprite Grandma.Phone>>
+[[— Phone a catering company. | Phone.Catering]]
+[[— Phone a DJ. | Phone.DJ]]
+[[— Phone your school teacher. | Phone.Teacher]]
+<<endif>>    
+===
+title: DrunkUncle.Phone
+tags: 
+colorID: 8
+position: -1203,-24
+---
+<<if !visited("DrunkUncle.Phone")>>
+<<showsprite DrunkUncle.Phone>>
+[[— Phone a catering company. | Phone.Catering]]
+[[— Phone a DJ. | Phone.DJ]]
+[[— Phone your school teacher. | Phone.Teacher]]
+<<endif>>    
+===
+title: FreeBuffetGuy.Phone
+tags: 
+colorID: 8
+position: -1203,-24
+---
+<<if !visited("FreeBuffetGuy.Phone")>>
+<<showsprite FreeBuffetGuy.Phone>>
+[[— Phone a catering company. | Phone.Catering]]
+[[— Phone a DJ. | Phone.DJ]]
+[[— Phone your school teacher. | Phone.Teacher]]
+<<endif>> 
+===
+title: Phone.Catering
+tags: 
+colorID: 8
+position: -1203,-24
+---
+<<if !visited("Phone.Catering")>>
+Eve: Hello, I would like to order something extra special to celebrate my Grandpa’s funeral.
+Caterer: How about a nice funeral cake?
+Eve: That sounds perfect.
+Caterer: Colour and flavour?
+Eve: Pink please, with lots of chocolate and pink animals.
+Caterer: I’ve got just the thing. I’ll deliver it straight to the buffet.
+<<showsprite FuneralCake>>
+<<hidesprite FreeBuffetGuy.Phone>>
+<<hidesprite Grandma.Phone>>
+<<hidesprite DrunkUncle.Phone>>
+<<endif>> 
+===
+title: Phone.DJ
+tags: 
+colorID: 8
+position: -1203,-24
+---
+<<if !visited("Phone.DJ")>>
+DJ Peachcheeks: DJ Peachcheeks at your service.
+Eve: Hello, would you be able to play at my Grandad’s funeral?
+DJ Peachcheeks: WOULD I? I LOVE PLAYING FUNERAL SETS. LET’S PUMP IT UP FOR YOUR GRANDPA!!!!
+<<showsprite Boombox>>
+<<hidesprite FreeBuffetGuy.Phone>>
+<<hidesprite Grandma.Phone>>
+<<hidesprite DrunkUncle.Phone>>
+<<endif>> 
+===
+title: Phone.Teacher
+tags: 
+colorID: 8
+position: -1203,-24
+---
+<<if !visited("Phone.Teacher")>>
+Eve: Hello Miss Honey, I am at my Grandad’s funeral.
+Miss Honey: I’m sorry to hear that Eve.
+Eve: Everyone is sad, how do I cheer them up?
+Miss Honey: They will cheer up in their own time, Eve. The only thing you can do is to be kind and helpful, and remember to be yourself.
+<<hidesprite FreeBuffetGuy.Phone>>
+<<hidesprite Grandma.Phone>>
+<<hidesprite DrunkUncle.Phone>>
+<<endif>> 
 ===
 title: Grandma.Persuasive
 tags: 
@@ -78,7 +163,7 @@ position: -298,-320
 [[Eve: You need to get this party started or I’ll tell Mum you tried to give me alcohol. | DrunkUncle.Depressing.Blackmail]]
 <<elseif visited("DrunkUncle.Depressing")>>
 Not now, Eve. Let me relax with this delicious funeral wine. 
-<<elseif visited("DrunkUncle.Positive")>>
+<<elseif visited("DrunkUncle.Positive") or visited("DrunkUncle.Phone")>>
 Not now, Eve. Let me relax with this delicious funeral wine. 
 <<else>>
 Eve: 		Drowning your sorrows? 
@@ -86,6 +171,7 @@ Drunk Uncle:	What was that my dear? I'm sorry I was away with the fairies for a 
 
 [[Eve: 	I said, it's a good excuse to drown your sorrows, isn’t it? | DrunkUncle.Depressing]]
 [[Eve: I think Grandpa would have been happy that at least someone is getting the drinks in. | DrunkUncle.Positive]]
+[[Eve: Can I borrow your phone? | DrunkUncle.Phone]]
 <<endif>>
 ===
 title: DrunkUncle.Depressing
@@ -159,13 +245,14 @@ Eve: Thanks for saying sorry.
 [[I think you’re a good-for-nothing freeloader. | FreeBuffetGuy.Direct.Freeloader]]
 <<elseif visited("FreeBuffetGuy.Direct.Poor")>>
 Free Buffet Guy: (Muffled) Sorry Eve, my mouth's a bit full at the moment.
-<<elseif visited("FreeBuffetGuy.Direct.Freeloader")>>
+<<elseif visited("FreeBuffetGuy.Direct.Freeloader") or visited("FreeBuffetGuy.Phone")>>
 Free Buffet Guy: (Muffled) Sorry Eve, my mouth's a bit full at the moment.
 <<else>>
 Free Buffet Guy: 	Good turn out, eh? Lots of mourners. 
 
 [[Eve 	I’m sorry, I'm just not really feeling it.  | FreeBuffetGuy.Heart]]
 [[Eve It's all wrong. We should be celebrating his life, not mourning his death.  | FreeBuffetGuy.Direct]]
+[[Eve: Can I borrow your phone? | FreeBuffetGuy.Phone]]
 <<endif>>
 ===
 title: FreeBuffetGuy.Heart
