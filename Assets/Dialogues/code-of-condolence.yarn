@@ -33,7 +33,7 @@ position: -1203,-24
 	Eve:	    	That sounds like something to celebrate! 
 	Grandma:	    	Indeed, to Grandpa! 
 	Eve:		To Grandpa!
-<<increasemood Grandma 50>>
+<<increasemood Grandma 100>>
 <<endif>>    
 ===
 title: Grandma.Phone
@@ -150,7 +150,7 @@ position: -892,-28
 Grandma:     Fun… at a funeral?
 Eve: 		Yes. Everyone here is so… miserable. 
 Grandma:	And so they should be! Aren’t you? After everything Grandpa did for you? You should be ashamed of yourself.
-<<decreasemood Grandma 50>>
+<<decreasemood Grandma 20>>
 <<endif>>
 ===
 title: Grandma.Persuasive.Fuckyou
@@ -162,7 +162,7 @@ position: -892,-28
 Grandma: I don’t know what’s got into you lately, Eve. But I understand everyone processes grief in different ways.
 Eve: Thank you Grandma, I’m sorry.
 Grandma: If you want to celebrate Grandpa, that’s fine with me.
-<<increasemood Grandma 50>>
+<<increasemood Grandma 100>>
 <<setCompleted Grandma>>
 <<endif>>
 ===
@@ -174,7 +174,7 @@ position: -892,-28
 <<if !visited("Grandma.Persuasive.Itsok")>>
 Grandma: Everyone processes grief in different ways. Eve, if you want to celebrate Grandpa, that’s fine with me.
 Eve: Oh Grandma, thank you!
-<<increasemood Grandma 50>>
+<<increasemood Grandma 100>>
 <<setCompleted Grandma>>
 <<endif>>
 ===
@@ -231,7 +231,7 @@ Eve: Well, I wanted to tell you, I thought it was great.
 Drunk Uncle: Really?
 Eve: Feel free to do the same thing today. It’s what Grandpa would have wanted.
 Drunk Uncle: Alrighty then! Let’s crack open the altar wine!
-<<increasemood DrunkUncle 20>>
+<<increasemood DrunkUncle 100>>
 <<setCompleted DrunkUncle>>
 <<endif>>
 ===
@@ -244,7 +244,7 @@ position: -415,-14
 Drunk Uncle: That’s blackmail young lady!
 Eve: Yes it is. I need you to get this party started, or else!
 Drunk Uncle: Fine! I will party! I will party so hard that I do not enjoy it at all and I will resent you forever.
-<<increasemood DrunkUncle 20>>
+<<increasemood DrunkUncle 100>>
 <<setCompleted DrunkUncle>>
 <<endif>>
 ===
@@ -259,7 +259,7 @@ Drunk Uncle: 	My dear, I am happy to be of service.
 	Drunk Uncle:		Couldn’t agree more, my dear! How about we go and give everyone a top up, make it a bit more lively! 
 	Eve:			    I think that’s a wonderful idea! To Grandpa! 
 	Drunk Uncle:		To Grandpa!
-<<increasemood DrunkUncle 20>>
+<<increasemood DrunkUncle 100>>
 <<setCompleted DrunkUncle>>
 <<endif>>
 ===
@@ -300,7 +300,7 @@ Free Buffet Guy:		Really? That’s a bold thing to say.
 	Eve:		    	    How did you know him?		
 	Free Buffet Guy:	    Er… um… oh the good old days… I…. Er… 
 				Say, isn’t this a splendid buffet? You must try a sausage roll.
-<<increasemood FreeBuffetGuy 20>>
+<<increasemood FreeBuffetGuy 100>>
 <<setCompleted FreeBuffetGuy>>
 <<endif>>
 ===
@@ -334,7 +334,7 @@ Free Buffet Guy: Poor? No, no. I’m not poor, but I am very lonely. I find a go
 Eve: Oh. Well, we can be friends if you like.
 Free Buffet Guy: Thank you, little girl. That would make me very happy indeed.
 
-<<increasemood FreeBuffetGuy 20>>
+<<increasemood FreeBuffetGuy 100>>
 <<setCompleted FreeBuffetGuy>>
 <<endif>>
 ===
@@ -349,7 +349,7 @@ Eve: I’m sorry.
 Free Buffet Guy: I’m not a freeloader, but in truth, I am lonely. I find a good buffet is a great way to make friends.
 Eve: Oh. Well, we can be friends if you like.
 Free Buffet Guy: Thank you, little girl. That would make me very happy indeed. 
-<<increasemood FreeBuffetGuy 20>>
+<<increasemood FreeBuffetGuy 100>>
 <<setCompleted FreeBuffetGuy>>
 <<endif>>
 ===
@@ -388,10 +388,13 @@ tags:
 colorID: 0
 position: -1250,752
 ---
+<<if !visited("PartyHat.Wear")>>
 <<hidesprite PartyHat>>
 <<showsprite PartyHat.Wear>>
 Drunk Uncle starts to laugh.
 'Cheer up everyone!' he exclaims. 
+<<increaseMood all 20>>
+<<endif>>
 ===
 title: PartyHat.Coffin
 tags: 
@@ -404,6 +407,7 @@ Silence falls across the room.
 
 Grandma starts to cry. 
 'My own blood!' She wails. 'Where did these morals come from?'  
+<<decreaseMood all 20>>
 ===
 title: Flowers.Holy
 tags: 
@@ -417,28 +421,36 @@ tags:
 colorID: 0
 position: -106,745
 ---
+<<if !visited("Flowers.Grandmaflowers")>>
 <<showsprite Flowers.Grandmaflowers>>
 <<hidesprite Flowers>>
 Grandma takes the flowers, and looks at you kindly. 
 'Thank you petal,' she says.
+<<increaseMood Grandma 50>>
+<<endif>>
 ===
 title: FuneralCake.Buffettable
 tags: 
 colorID: 0
 position: 338,756
 ---
+<<if !visited("FuneralCake.Buffettable")>>
 <<hidesprite FuneralCake>>
 Free Buffet Guy is overjoyed. 
 'This is what keeps me coming back to this buffe... I mean, church.' He says.
+<<endif>>
 ===
 title: FuneralCake.Sick
 tags: 
 colorID: 0
 position: 739,748
 ---
+<<if !visited("FuneralCake.Sick")>>
 <<hidesprite FuneralCake>>
 <<showsprite FuneralCake.Sick>>
 The cake is chocolatey and delicious, but it makes you feel a bit sick. You try to run to the toilet, but on the way you spray cake-sick all over... Grandad's coffin. 
 
 Even Drunk Uncle is embarrassed for you. 
+<<decreaseMood all 50>>
+<<endif>>
 ===
