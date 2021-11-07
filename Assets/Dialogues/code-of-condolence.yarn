@@ -118,7 +118,7 @@ position: -1081,481
 You spot something pink against the stone wall. It's a party hat! 
 
 [[Wear the party hat. | PartyHat.Wear]]
-[[Respectfully place the party hat on Grandad's coffin. | PartyHat.Coffin]]
+[[Respectfully place the party hat on Grandad's coffin. (Go take a look!) | PartyHat.Coffin]]
 ===
 title: Flowers
 tags: 
@@ -135,11 +135,9 @@ tags:
 colorID: 0
 position: 493,490
 ---
-Can I borrow your phone?
+The funeral cake you ordered is on the buffet table. 
 
-
-
-[[Put the cake on the buffet table. | FuneralCake.Buffettable]]
+[[Donate the cake to the poor. | FuneralCake.Buffettable]]
 [[Eat the entire cake yourself. | FuneralCake.Sick]]
 ===
 title: PartyHat.Wear
