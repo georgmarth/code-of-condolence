@@ -1,4 +1,5 @@
-﻿using UniRx;
+﻿using System;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,10 +21,11 @@ public class GameMenu : MonoBehaviour
         _letterWasShown = false;
         Letter.gameObject.SetActive(false);
         AfterLetterText.gameObject.SetActive(false);
+        Music.Instance.SwitchMusic(Music.Instance.FuneralMarch);
 
         StartButton
             .OnClickAsObservable()
-            .Subscribe(_ => StartGame());
+            .Subscribe(_ => PlayIntro());
 
         ExitButton.OnClickAsObservable()
             .Subscribe(_ => Application.Quit());
@@ -32,10 +34,25 @@ public class GameMenu : MonoBehaviour
             .Select(_ => Input.GetKey(KeyCode.Escape))
             .DistinctUntilChanged()
             .Where(keyPressed => keyPressed)
-            .Subscribe(_ => SetStartMenuActive(true));
+            .Subscribe(_ => OnEscKeyPressed());
     }
 
-    private void StartGame()
+    private void OnEscKeyPressed()
+    {
+        if (Canvas.gameObject.activeSelf && _letterWasShown)
+        {
+            SetStartMenuActive(false);
+            return;
+        }
+
+        if (!Canvas.gameObject.activeSelf)
+        {
+            SetStartMenuActive(true);
+        }
+
+    }
+
+    private void PlayIntro()
     {
         if (!_letterWasShown)
         {
@@ -49,24 +66,28 @@ public class GameMenu : MonoBehaviour
                 .AsUnitObservable()
                 .Merge(SkipButton.OnClickAsObservable().AsUnitObservable())
                 .Take(1)
-                .Subscribe(_ =>
-                {
-                    AfterLetterText.gameObject.SetActive(true);
-                    AfterLetterText.OnClickAsObservable()
-                        .Take(1)
-                        .Subscribe(_ =>
-                        {
-                            _letterWasShown = true;
-                            Letter.SetActive(false);
-                            SetStartMenuActive(false);
-                        });
-
-                });
+                .Subscribe(ShowAfterLetterText);
         }
         else
         {
             SetStartMenuActive(false);
         }
+    }
+
+    private void ShowAfterLetterText(Unit _)
+    {
+        AfterLetterText.gameObject.SetActive(true);
+        AfterLetterText.OnClickAsObservable()
+            .Take(1)
+            .Subscribe(StartGame);
+    }
+
+    private void StartGame(Unit _)
+    {
+        _letterWasShown = true;
+        Letter.SetActive(false);
+        SetStartMenuActive(false);
+        Music.Instance.SwitchMusic(Music.Instance.SadMusic);
     }
 
     private void SetStartMenuActive(bool value)
