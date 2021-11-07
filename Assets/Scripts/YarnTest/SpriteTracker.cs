@@ -23,6 +23,7 @@ public class SpriteTracker : MonoBehaviour
             var spriteName = parameters[0].AsString;
             return moodStorage.GetSpriteState(spriteName);
         });
+        dialogueRunner.AddCommandHandler("setCompleted", SetCompleted);
     }
     void ShowSprite(string[] parameters)
     {
@@ -33,6 +34,12 @@ public class SpriteTracker : MonoBehaviour
     {
         var name = parameters[0];
         moodStorage.SetSpriteState(name, false);
+    }
+
+    void SetCompleted(string[] parameters)
+    {
+        var name = parameters[0];
+        moodStorage.SetCompleted(name);
     }
 
 }
