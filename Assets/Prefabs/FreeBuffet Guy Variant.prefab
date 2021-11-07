@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8444298643888227571}
   - component: {fileID: 3165674333565132803}
+  - component: {fileID: 7778649639027759987}
   m_Layer: 0
   m_Name: Freebuffet Guy Head
   m_TagString: Untagged
@@ -194,6 +195,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7778649639027759987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7005235093237541564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532c5bf4159747e7a7d67712b689b67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotationDuration: 10
+  RotationStrength: 10
 --- !u!1001 &519812891470176970
 PrefabInstance:
   m_ObjectHideFlags: 0
