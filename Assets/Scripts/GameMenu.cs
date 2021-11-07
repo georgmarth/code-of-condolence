@@ -8,7 +8,9 @@ public class GameMenu : MonoBehaviour
     public Button ExitButton;
     public Canvas Canvas;
     public GameObject Letter;
+    public Button SkipButton;
     public AudioSource Narrator;
+    public Button AfterLetterText;
 
     private bool _letterWasShown;
     
@@ -17,6 +19,7 @@ public class GameMenu : MonoBehaviour
         SetStartMenuActive(true);
         _letterWasShown = false;
         Letter.gameObject.SetActive(false);
+        AfterLetterText.gameObject.SetActive(false);
 
         StartButton
             .OnClickAsObservable()
@@ -43,12 +46,21 @@ public class GameMenu : MonoBehaviour
                 .Skip(1)
                 .DistinctUntilChanged()
                 .Where(isPlaying => !isPlaying)
+                .AsUnitObservable()
+                .Merge(SkipButton.OnClickAsObservable().AsUnitObservable())
                 .Take(1)
                 .Subscribe(_ =>
                 {
-                    _letterWasShown = true;
-                    Letter.SetActive(false);
-                    SetStartMenuActive(false);
+                    AfterLetterText.gameObject.SetActive(true);
+                    AfterLetterText.OnClickAsObservable()
+                        .Take(1)
+                        .Subscribe(_ =>
+                        {
+                            _letterWasShown = true;
+                            Letter.SetActive(false);
+                            SetStartMenuActive(false);
+                        });
+
                 });
         }
         else
