@@ -14,7 +14,7 @@ namespace Assets.Scripts.YarnTest
             );
             dialogueRunner.AddCommandHandler(
                 "decreasemood",
-                IncreaseMood
+                DecreaseMood
             );
             // Register a function on startup called "visited" that lets Yarn
             // scripts query to see if a node has been run before.
