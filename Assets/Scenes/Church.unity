@@ -346,6 +346,10 @@ PrefabInstance:
       value: Flowers
       objectReference: {fileID: 0}
     - target: {fileID: 1061641280930645091, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
+      propertyPath: InitialState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1061641280930645091, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
       propertyPath: SpriteObject
       value: 
       objectReference: {fileID: 328752279}
@@ -371,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1120017498650474701, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -48.92008
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1120017498650474701, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
       propertyPath: m_LocalRotation.w
@@ -413,6 +417,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: bdf3fc0f0069d0d42a8dcfa809f0a98b, type: 3}
+    - target: {fileID: 6193912066144970440, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
+      propertyPath: m_SortingLayer
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193912066144970440, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193912066144970440, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2052766223
+      objectReference: {fileID: 0}
     - target: {fileID: 6193912066144970440, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -525,7 +541,7 @@ SpriteRenderer:
   m_SortingLayerID: 2052766223
   m_SortingLayer: -2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4d910076d26e4ca439ec7f5141443bcf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a08493fa5bf263f45bcc948340bf0941, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -549,7 +565,7 @@ Transform:
   m_Children:
   - {fileID: 6525263}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &511752218
 GameObject:
@@ -846,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1120017498650474701, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1120017498650474701, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1492,7 +1508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1120017498650474701, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -48.92008
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1120017498650474701, guid: 0bb2addfb8b0b894dac61e11cb4c2512, type: 3}
       propertyPath: m_LocalRotation.w
