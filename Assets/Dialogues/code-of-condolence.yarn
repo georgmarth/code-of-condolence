@@ -44,6 +44,7 @@ position: -1203,-24
 [[— Phone a catering company. | Phone.Catering]]
 [[— Phone a DJ. | Phone.DJ]]
 [[— Phone your school teacher. | Phone.Teacher]]
+<<set $GrandmaCompleted to true>>
 <<endif>>    
 ===
 title: DrunkUncle.Phone
@@ -56,6 +57,7 @@ position: -1203,-24
 [[— Phone a catering company. | Phone.Catering]]
 [[— Phone a DJ. | Phone.DJ]]
 [[— Phone your school teacher. | Phone.Teacher]]
+<<set $DrunkUncleCompleted to true>>
 <<endif>>    
 ===
 title: FreeBuffetGuy.Phone
@@ -68,6 +70,7 @@ position: -1203,-24
 [[— Phone a catering company. | Phone.Catering]]
 [[— Phone a DJ. | Phone.DJ]]
 [[— Phone your school teacher. | Phone.Teacher]]
+<<set $FreeBuffetGuyCompleted to true>>
 <<endif>> 
 ===
 title: Phone.Catering
@@ -140,6 +143,7 @@ Grandma: I don’t know what’s got into you lately, Eve. But I understand ever
 Eve: Thank you Grandma, I’m sorry.
 Grandma: If you want to celebrate Grandpa, that’s fine with me.
 <<increasemood Grandma 50>>
+<<set $GrandmaCompleted to true>>
 <<endif>>
 ===
 title: Grandma.Persuasive.Itsok
@@ -151,6 +155,7 @@ position: -892,-28
 Grandma: Everyone processes grief in different ways. Eve, if you want to celebrate Grandpa, that’s fine with me.
 Eve: Oh Grandma, thank you!
 <<increasemood Grandma 50>>
+<<set $GrandmaCompleted to true>>
 <<endif>>
 ===
 title: DrunkUncle
@@ -205,6 +210,7 @@ Drunk Uncle: Really?
 Eve: Feel free to do the same thing today. It’s what Grandpa would have wanted.
 Drunk Uncle: Alrighty then! Let’s crack open the altar wine!
 <<increasemood DrunkUncle 20>>
+<<set $DrunkUncleCompleted to true>>
 <<endif>>
 ===
 title: DrunkUncle.Depressing.Blackmail
@@ -217,6 +223,7 @@ Drunk Uncle: That’s blackmail young lady!
 Eve: Yes it is. I need you to get this party started, or else!
 Drunk Uncle: Fine! I will party! I will party so hard that I do not enjoy it at all and I will resent you forever.
 <<increasemood DrunkUncle 20>>
+<<set $DrunkUncleCompleted to true>>
 <<endif>>
 ===
 title: DrunkUncle.Positive
@@ -231,6 +238,7 @@ Drunk Uncle: 	My dear, I am happy to be of service.
 	Eve:			    I think that’s a wonderful idea! To Grandpa! 
 	Drunk Uncle:		To Grandpa!
 <<increasemood DrunkUncle 20>>
+<<set $DrunkUncleCompleted to true>>
 <<endif>>
 ===
 title: FreeBuffetGuy
@@ -269,6 +277,7 @@ Free Buffet Guy:		Really? That’s a bold thing to say.
 	Free Buffet Guy:	    Er… um… oh the good old days… I…. Er… 
 				Say, isn’t this a splendid buffet? You must try a sausage roll.
 <<increasemood FreeBuffetGuy 20>>
+<<set $FreeBuffetGuyCompleted to true>>
 <<endif>>
 ===
 title: FreeBuffetGuy.Direct
@@ -302,6 +311,7 @@ Eve: Oh. Well, we can be friends if you like.
 Free Buffet Guy: Thank you, little girl. That would make me very happy indeed.
 
 <<increasemood FreeBuffetGuy 20>>
+<<set $FreeBuffetGuyCompleted to true>>
 <<endif>>
 ===
 title: FreeBuffetGuy.Direct.Freeloader
@@ -316,6 +326,7 @@ Free Buffet Guy: I’m not a freeloader, but in truth, I am lonely. I find a goo
 Eve: Oh. Well, we can be friends if you like.
 Free Buffet Guy: Thank you, little girl. That would make me very happy indeed. 
 <<increasemood FreeBuffetGuy 20>>
+<<set $FreeBuffetGuyCompleted to true>>
 <<endif>>
 ===
 title: PartyHat
