@@ -41,9 +41,15 @@ position: -1203,-24
 ---
 <<if !visited("Grandma.Phone")>>
 <<showsprite Grandma.Phone>>
+<<if !visited("Phone.Catering")>>
 [[— Phone a catering company. | Phone.Catering]]
+<<endif>>
+<<if !visited("Phone.DJ")>>
 [[— Phone a DJ. | Phone.DJ]]
+<<endif>>
+<<if !visited("Phone.Teacher")>>
 [[— Phone your school teacher. | Phone.Teacher]]
+<<endif>>
 <<set $GrandmaCompleted to true>>
 <<endif>>    
 ===
@@ -54,9 +60,15 @@ position: -1203,-24
 ---
 <<if !visited("DrunkUncle.Phone")>>
 <<showsprite DrunkUncle.Phone>>
+<<if !visited("Phone.Catering")>>
 [[— Phone a catering company. | Phone.Catering]]
+<<endif>>
+<<if !visited("Phone.DJ")>>
 [[— Phone a DJ. | Phone.DJ]]
+<<endif>>
+<<if !visited("Phone.Teacher")>>
 [[— Phone your school teacher. | Phone.Teacher]]
+<<endif>>
 <<set $DrunkUncleCompleted to true>>
 <<endif>>    
 ===
@@ -67,9 +79,15 @@ position: -1203,-24
 ---
 <<if !visited("FreeBuffetGuy.Phone")>>
 <<showsprite FreeBuffetGuy.Phone>>
+<<if !visited("Phone.Catering")>>
 [[— Phone a catering company. | Phone.Catering]]
+<<endif>>
+<<if !visited("Phone.DJ")>>
 [[— Phone a DJ. | Phone.DJ]]
+<<endif>>
+<<if !visited("Phone.Teacher")>>
 [[— Phone your school teacher. | Phone.Teacher]]
+<<endif>>
 <<set $FreeBuffetGuyCompleted to true>>
 <<endif>> 
 ===
