@@ -10,7 +10,6 @@ public class GameStateManager : Singleton<GameStateManager>
     public readonly IReactiveProperty<bool> AllOptionsAreExhausted = new ReactiveProperty<bool>(false);
     public readonly IReactiveProperty<bool> GameMenuIsShown = new ReactiveProperty<bool>(true);
 
-
     private void Awake()
     {
         GameIsWon = FindObjectsOfType<NPC>()

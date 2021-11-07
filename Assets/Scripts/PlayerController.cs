@@ -14,17 +14,22 @@ public class PlayerController : Singleton<PlayerController>
     {
         ClickEventManager.Instance
             .InteractableClicks
-            .Where(_ => !DialogueInstance.Instance.DialogueRunner.IsDialogueRunning)
+            .Where(_ => CanInteract)
             .Subscribe(StartWalkingTo);
 
         ClickEventManager.Instance
             .WorldClicks
-            .Where(_ => !DialogueInstance.Instance.DialogueRunner.IsDialogueRunning)
+            .Where(_ => CanInteract)
             .Subscribe(StartWalkingTo);
         
         ArrivingAt.Subscribe(WhenArrivingAtInteractable);
-
     }
+
+    private static bool CanInteract => 
+        !DialogueInstance.Instance.DialogueRunner.IsDialogueRunning &&
+        !GameStateManager.Instance.GameIsWon.Value &&
+        !GameStateManager.Instance.AllOptionsAreExhausted.Value &&
+        !GameStateManager.Instance.GameMenuIsShown.Value;
 
     private void WhenArrivingAtInteractable(Interactable interactable)
     {
