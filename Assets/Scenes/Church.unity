@@ -1361,6 +1361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FuneralCake
       objectReference: {fileID: 0}
+    - target: {fileID: 3137413242013289771, guid: f5f5df5e1c1470046b49addbc1e91f56, type: 3}
+      propertyPath: InitialState
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f5df5e1c1470046b49addbc1e91f56, type: 3}
 --- !u!1001 &3749534384948529678
