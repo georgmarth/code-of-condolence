@@ -3,14 +3,27 @@ tags:
 colorID: 0
 position: -1098,-317
 ---
+<<if visited("Grandma.Persuasive") and !visited("Grandma.Persuasive.Fuckyou") and !visited("Grandma.Persuasive.Itsok")>>
+Grandma: 	I was hard on you earlier, Eve, I’m sorry.
+[[Eve: 	It’s ok Grandma. | Grandma.Persuasive.Itsok]]
+[[Eve: 	Fuck you, Grandma. | Grandma.Persuasive.Fuckyou]]
+<<elseif visited("Grandma.Persuasive")>>
+Grandma: Oh Eve, stop bothering me.
+<<stop>>
+<<elseif visited("Grandma.Sympathetic")>>
+Grandma: I hope this doesn't go on too long. My boat leaves at 6pm. 
+<<stop>>
+<<else>>
 [[Eve: You’re going to really miss Grandpa, huh? | Grandma.Sympathetic]]
 [[Eve: Don’t you think that Grandpa would have wanted something a bit more… fun? | Grandma.Persuasive]]
+<<endif>>
 ===
 title: Grandma.Sympathetic
 tags: 
 colorID: 8
 position: -1203,-24
 ---
+<<if !visited("Grandma.Sympathetic")>>
 	Grandma:    	Terribly! My, fifty years... But every cloud has a silver lining. 
 	Eve:	    	What do you mean? 
 	Grandma: 	I can get rid of all his model trains. And with the money he left, I’ve booked a cruise! 
@@ -18,34 +31,69 @@ position: -1203,-24
 	Grandma:	    	Indeed, to Grandpa! 
 	Eve:		To Grandpa!
 <<increasemood Grandma 50>>
-    
+<<endif>>    
 ===
 title: Grandma.Persuasive
 tags: 
 colorID: 7
 position: -892,-28
 ---
-<<decreasemood Grandma 50>>
+<<if !visited("Grandma.Persuasive")>>
 Grandma:     Fun… at a funeral?
 Eve: 		Yes. Everyone here is so… miserable. 
 Grandma:	And so they should be! Aren’t you? After everything Grandpa did for you? You should be ashamed of yourself.
+<<decreasemood Grandma 50>>
+<<endif>>
+===
+title: Grandma.Persuasive.Fuckyou
+tags: 
+colorID: 7
+position: -892,-28
+---
+<<if !visited("Grandma.Persuasive.Fuckyou")>>
+Grandma: I don’t know what’s got into you lately, Eve. But I understand everyone processes grief in different ways.
+Eve: Thank you Grandma, I’m sorry.
+Grandma: If you want to celebrate Grandpa, that’s fine with me.
+<<increasemood Grandma 50>>
+<<endif>>
+===
+title: Grandma.Persuasive.Itsok
+tags: 
+colorID: 7
+position: -892,-28
+---
+<<if !visited("Grandma.Persuasive.Itsok")>>
+Grandma: Everyone processes grief in different ways. Eve, if you want to celebrate Grandpa, that’s fine with me.
+Eve: Oh Grandma, thank you!
+<<increasemood Grandma 50>>
+<<endif>>
 ===
 title: DrunkUncle
 tags: 
 colorID: 1
 position: -298,-320
 ---
+<<if visited("DrunkUncle.Depressing") and !visited("DrunkUncle.Depressing.DrinkingProblem") and !visited("DrunkUncle.Depressing.Blackmail")>>
+[[Eve: I want to talk to you about your drinking problem. | DrunkUncle.Depressing.DrinkingProblem]]
+[[Eve: You need to get this party started or I’ll tell Mum you tried to give me alcohol. | DrunkUncle.Depressing.Blackmail]]
+<<elseif visited("DrunkUncle.Depressing")>>
+Not now, Eve. Let me relax with this delicious funeral wine. 
+<<elseif visited("DrunkUncle.Positive")>>
+Not now, Eve. Let me relax with this delicious funeral wine. 
+<<else>>
 Eve: 		Drowning your sorrows? 
 Drunk Uncle:	What was that my dear? I'm sorry I was away with the fairies for a moment. 
 
 [[Eve: 	I said, it's a good excuse to drown your sorrows, isn’t it? | DrunkUncle.Depressing]]
 [[Eve: I think Grandpa would have been happy that at least someone is getting the drinks in. | DrunkUncle.Positive]]
+<<endif>>
 ===
 title: DrunkUncle.Depressing
 tags: 
 colorID: 0
 position: -415,-14
 ---
+<<if !visited("DrunkUncle.Depressing")>>
 Drunk Uncle: As good as ever, my dear. Fancy a top up? 
 	Eve:			I’m ok thanks. 
 	Drunk Uncle:	    	Oh, go on. 
@@ -55,34 +103,77 @@ Drunk Uncle: As good as ever, my dear. Fancy a top up?
 	Drunk Uncle: 		Drunk? Oh, no dear. No one is drunk here. Hic! We must pay our respects properly. A moment of silence now, to remember.
 
 <<decreasemood DrunkUncle 20>>
+<<endif>>
+===
+title: DrunkUncle.Depressing.DrinkingProblem
+tags: 
+colorID: 0
+position: -415,-14
+---
+<<if !visited("DrunkUncle.Depressing.DrinkingProblem")>>
+Drunk Uncle: Drinking problem? I don’t know what your talking about.
+Eve: Mum said that the reason you turned up at our house naked last Christmas, covered in mud singing ‘Everybody Wants to Rule the World’ was because of your drinking problem.
+Drunk Uncle: I think would remember if I had done something as outrageous as that.
+Eve: Well, I wanted to tell you, I thought it was great.
+Drunk Uncle: Really?
+Eve: Feel free to do the same thing today. It’s what Grandpa would have wanted.
+Drunk Uncle: Alrighty then! Let’s crack open the altar wine!
+<<increasemood DrunkUncle 20>>
+<<endif>>
+===
+title: DrunkUncle.Depressing.Blackmail
+tags: 
+colorID: 0
+position: -415,-14
+---
+<<if !visited("DrunkUncle.Depressing.Blackmail")>>
+Drunk Uncle: That’s blackmail young lady!
+Eve: Yes it is. I need you to get this party started, or else!
+Drunk Uncle: Fine! I will party! I will party so hard that I do not enjoy it at all and I will resent you forever.
+<<increasemood DrunkUncle 20>>
+<<endif>>
 ===
 title: DrunkUncle.Positive
 tags: 
 colorID: 0
 position: -107,-15
 ---
+<<if !visited("DrunkUncle.Positive")>>
 Drunk Uncle: 	My dear, I am happy to be of service. 
 	Eve:	I think Grandpa would have wanted everyone to celebrate, not sit around being sad. 
 	Drunk Uncle:		Couldn’t agree more, my dear! How about we go and give everyone a top up, make it a bit more lively! 
 	Eve:			    I think that’s a wonderful idea! To Grandpa! 
 	Drunk Uncle:		To Grandpa!
 <<increasemood DrunkUncle 20>>
+<<endif>>
 ===
 title: FreeBuffetGuy
 tags: 
 colorID: 0
 position: 479,-311
 ---
+<<if visited("FreeBuffetGuy.Direct") and !visited("FreeBuffetGuy.Direct.Poor") and !visited("FreeBuffetGuy.Direct.Freeloader")>>
+Free Buffet Guy: Sorry if I was rude earlier. You’re a little girl who has lost her Grandpa, after all.
+Eve: Thanks for saying sorry.
+[[You’re just here for the free food, aren’t you? Are you poor? | FreeBuffetGuy.Direct.Poor]]
+[[I think you’re a good-for-nothing freeloader. | FreeBuffetGuy.Direct.Freeloader]]
+<<elseif visited("FreeBuffetGuy.Direct.Poor")>>
+Free Buffet Guy: (Muffled) Sorry Eve, my mouth's a bit full at the moment.
+<<elseif visited("FreeBuffetGuy.Direct.Freeloader")>>
+Free Buffet Guy: (Muffled) Sorry Eve, my mouth's a bit full at the moment.
+<<else>>
 Free Buffet Guy: 	Good turn out, eh? Lots of mourners. 
 
 [[Eve 	I’m sorry, I'm just not really feeling it.  | FreeBuffetGuy.Heart]]
 [[Eve It's all wrong. We should be celebrating his life, not mourning his death.  | FreeBuffetGuy.Direct]]
+<<endif>>
 ===
 title: FreeBuffetGuy.Heart
 tags: 
 colorID: 0
 position: 345,-21
 ---
+<<if !visited("FreeBuffetGuy.Heart")>>
 Free Buffet Guy:		Really? That’s a bold thing to say. 
 	Eve:		I want to celebrate Grandpa for all the good times we had, not mourn the fact he’s gone.
 	Free Buffet Guy:		I’ll drink to that, little girl. That’s beautiful. 
@@ -91,12 +182,14 @@ Free Buffet Guy:		Really? That’s a bold thing to say.
 	Free Buffet Guy:	    Er… um… oh the good old days… I…. Er… 
 				Say, isn’t this a splendid buffet? You must try a sausage roll.
 <<increasemood FreeBuffetGuy 20>>
+<<endif>>
 ===
 title: FreeBuffetGuy.Direct
 tags: 
 colorID: 0
 position: 666,-25
 ---
+<<if !visited("FreeBuffetGuy.Direct")>>
 Free Buffet Guy: 	Hear hear! 
 	Eve:			        I think he would have wanted us to celebrate every moment of his life. 
 	Free Buffet Guy:		Exactly. I want to celebrate every little detail! 
@@ -109,6 +202,34 @@ Free Buffet Guy: 	Hear hear!
 	Free Buffet Guy		Just leave me here with all of this... free food. Oh look, sausages on a stick!
 
 <<decreasemood FreeBuffetGuy 20>>
+<<endif>>
+===
+title: FreeBuffetGuy.Direct.Poor
+tags: 
+colorID: 0
+position: 666,-25
+---
+<<if !visited("FreeBuffetGuy.Direct.Poor")>>
+Free Buffet Guy: Poor? No, no. I’m not poor, but I am very lonely. I find a good buffet is a great way to make friends.
+Eve: Oh. Well, we can be friends if you like.
+Free Buffet Guy: Thank you, little girl. That would make me very happy indeed.
+
+<<increasemood FreeBuffetGuy 20>>
+<<endif>>
+===
+title: FreeBuffetGuy.Direct.Freeloader
+tags: 
+colorID: 0
+position: 666,-25
+---
+<<if !visited("FreeBuffetGuy.Direct.Freeloader")>>
+Free Buffet Guy: Freeloader? That’s not very nice.
+Eve: I’m sorry.
+Free Buffet Guy: I’m not a freeloader, but in truth, I am lonely. I find a good buffet is a great way to make friends.
+Eve: Oh. Well, we can be friends if you like.
+Free Buffet Guy: Thank you, little girl. That would make me very happy indeed. 
+<<increasemood FreeBuffetGuy 20>>
+<<endif>>
 ===
 title: PartyHat
 tags: 
@@ -194,6 +315,7 @@ colorID: 0
 position: 739,748
 ---
 <<hidesprite FuneralCake>>
+<<showsprite FuneralCake.Sick>>
 The cake is chocolatey and delicious, but it makes you feel a bit sick. You try to run to the toilet, but on the way you spray cake-sick all over... Grandad's coffin. 
 
 Even Drunk Uncle is embarrassed for you. 
