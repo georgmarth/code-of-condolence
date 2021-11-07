@@ -116,6 +116,10 @@ PrefabInstance:
       propertyPath: m_Value
       value: 22.8
       objectReference: {fileID: 0}
+    - target: {fileID: 1196209236110076501, guid: 9e6925ed900e238448463592a091332c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1254583327
+      objectReference: {fileID: 0}
     - target: {fileID: 2029357410646851668, guid: 9e6925ed900e238448463592a091332c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

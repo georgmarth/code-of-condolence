@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5b468a475107b4db322c9fafd7d409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteObject: {fileID: 0}
+  SpriteObject: {fileID: 1427810139523519846}
   SpriteId: 
   InitialState: 0
 --- !u!1 &1427810139523519846
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24da4861e65c444fb821ac932b3f84d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetTransform: {fileID: 0}
+  TargetTransform: {fileID: 1120017498650474701}
   interactableName: 
   talkToNode: 
   scriptToLoad: {fileID: 0}
@@ -172,7 +172,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 6, y: 6}
   m_EdgeRadius: 0
 --- !u!114 &434919793277517372
 MonoBehaviour:
@@ -186,5 +186,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172e368794373584eb07d5a6b0278cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Collider: {fileID: 0}
-  Interactable: {fileID: 0}
+  Collider: {fileID: 6877376975486390571}
+  Interactable: {fileID: 331863348937859881}
