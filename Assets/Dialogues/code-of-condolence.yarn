@@ -54,6 +54,7 @@ position: -1203,-24
 [[— Phone your school teacher. | Phone.Teacher]]
 <<setCompleted Grandma>>
 <<endif>>
+<<stop>>
 ===
 title: DrunkUncle.Phone
 tags: 
@@ -73,6 +74,7 @@ position: -1203,-24
 [[— Phone your school teacher. | Phone.Teacher]]
 <<setCompleted DrunkUncle>>
 <<endif>>
+<<stop>>
 ===
 title: FreeBuffetGuy.Phone
 tags: 
@@ -92,6 +94,7 @@ position: -1203,-24
 [[— Phone your school teacher. | Phone.Teacher]]
 <<setCompleted FreeBuffetGuy>>
 <<endif>> 
+<<stop>>
 ===
 title: Phone.Catering
 tags: 
