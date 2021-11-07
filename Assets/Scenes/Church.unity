@@ -323,8 +323,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1677145254}
   - component: {fileID: 1677145253}
-  - component: {fileID: 1677145256}
   - component: {fileID: 1677145255}
+  - component: {fileID: 1677145256}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -435,7 +435,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 6.71}
+  m_Size: {x: 121.67293, y: 30.24}
   m_EdgeRadius: 0
 --- !u!1001 &230979402886141833
 PrefabInstance:
@@ -519,7 +519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 613549889103508557, guid: d3a22bfb9fbc70c4485fb05a314949dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 613549889103508557, guid: d3a22bfb9fbc70c4485fb05a314949dd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -552,10 +552,6 @@ PrefabInstance:
     - target: {fileID: 613549889103508557, guid: d3a22bfb9fbc70c4485fb05a314949dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 613549889103508558, guid: d3a22bfb9fbc70c4485fb05a314949dd, type: 3}
-      propertyPath: orthographic size
-      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 613549889103508560, guid: d3a22bfb9fbc70c4485fb05a314949dd, type: 3}
       propertyPath: m_Name
