@@ -293,6 +293,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9105786556800537989, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
+      propertyPath: m_text
+      value: Drunken Uncle
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2035500923238756732, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b161ed9377b4a0c43aae3c476e494880, type: 3}
