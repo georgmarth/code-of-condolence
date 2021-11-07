@@ -10,7 +10,7 @@ Grandma: 	I was hard on you earlier, Eve, I’m sorry.
 <<elseif visited("Grandma.Persuasive")>>
 Grandma: Oh Eve, stop bothering me.
 <<stop>>
-<<elseif visited("Grandma.Sympathetic") or visited("Grandma.Phone")>>
+<<elseif visited("Grandma.Sympathetic")>>
 Grandma: I hope this doesn't go on too long. My boat leaves at 6pm. 
 <<stop>>
 <<else>>
@@ -41,46 +41,55 @@ tags:
 colorID: 8
 position: -1203,-24
 ---
-<<if !visited("Grandma.Phone")>>
 <<showsprite Grandma.Phone>>
 <<if !visited("Phone.Catering")>>
 [[— Phone a catering company. | Phone.Catering]]
+<<setCompleted Grandma>>
 <<endif>>
 <<if !visited("Phone.DJ")>>
 [[— Phone a DJ. | Phone.DJ]]
+<<setCompleted Grandma>>
 <<endif>>
 <<if !visited("Phone.Teacher")>>
 [[— Phone your school teacher. | Phone.Teacher]]
-<<endif>>
 <<setCompleted Grandma>>
-<<endif>>    
+<<endif>>
 ===
 title: DrunkUncle.Phone
 tags: 
 colorID: 8
 position: -1203,-24
 ---
-<<if !visited("DrunkUncle.Phone")>>
 <<showsprite DrunkUncle.Phone>>
 <<if !visited("Phone.Catering")>>
 [[— Phone a catering company. | Phone.Catering]]
+<<setCompleted DrunkUncle>>
 <<endif>>
 <<if !visited("Phone.DJ")>>
 [[— Phone a DJ. | Phone.DJ]]
+<<setCompleted DrunkUncle>>
 <<endif>>
 <<if !visited("Phone.Teacher")>>
 [[— Phone your school teacher. | Phone.Teacher]]
-<<endif>>
 <<setCompleted DrunkUncle>>
-<<endif>>    
+<<endif>>
 ===
 title: FreeBuffetGuy.Phone
 tags: 
 colorID: 8
 position: -1203,-24
 ---
-<<if !visited("FreeBuffetGuy.Phone")>>
 <<showsprite FreeBuffetGuy.Phone>>
+<<if !visited("Phone.Catering")>>
+[[— Phone a catering company. | Phone.Catering]]
+<<setCompleted DrunkUncle>>
+<<endif>>
+<<if !visited("Phone.DJ")>>
+[[— Phone a DJ. | Phone.DJ]]
+<<setCompleted DrunkUncle>>
+<<endif>>
+<<if !visited("Phone.Teacher")>>
+[[— Phone your school teacher. | Phone.Teacher]]
 <<setCompleted FreeBuffetGuy>>
 <<endif>> 
 ===
