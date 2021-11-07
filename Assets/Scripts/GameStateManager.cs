@@ -7,7 +7,7 @@ using UnityEngine;
 public class GameStateManager : Singleton<GameStateManager>
 {
     public IReadOnlyReactiveProperty<bool> GameIsWon { get; private set; }
-    public readonly IReactiveProperty<bool> AllOptionsAreExhausted = new ReactiveProperty<bool>(false);
+    public IReadOnlyReactiveProperty<bool> AllOptionsAreExhausted { get; private set; }
     public readonly IReactiveProperty<bool> GameMenuIsShown = new ReactiveProperty<bool>(true);
 
     private void Awake()
@@ -18,9 +18,21 @@ public class GameStateManager : Singleton<GameStateManager>
             .Select(CheckWinCondition)
             .ToReadOnlyReactiveProperty(false);
 
+        AllOptionsAreExhausted = Observable.EveryUpdate()
+            .Select(_ => AreAllOptionsExhausted())
+            .ToReadOnlyReactiveProperty();
+            
+
         GameIsWon
             .Where(gameIsWon => gameIsWon)
             .Subscribe(_ => Debug.Log("You win!"));
+    }
+
+    private static bool AreAllOptionsExhausted()
+    {
+        return FindObjectsOfType<NPC>()
+            .All(npc => DialogueInstance.Instance.MoodStorage.GetValue($"{npc.Interactable.interactableName}Completed")
+                .AsBool);
     }
 
     private static IObservable<float> GetMoodObservable(NPC npc)
